@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলাদেশ নার্সেস এসোসিয়েশন (বিএনএ), ময়মনসিংহ জেলা শাখা</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'SolaimanLipi', 'Siyam Rupali', Arial, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #e74c3c;
+            --accent-color: #2ecc71;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #2980b9);
+            color: white;
+            padding: 10px 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            overflow: hidden;
+            border: 3px solid var(--secondary-color);
+        }
+        
+        .logo i {
+            font-size: 40px;
+            color: var(--primary-color);
+        }
+        
+        .university-name h1 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        
+        .university-name p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+        
+        .main-nav {
+            display: flex;
+            list-style: none;
+        }
+        
+        .main-nav li {
+            position: relative;
+        }
+        
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .main-nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .main-nav a.active {
+            background-color: var(--secondary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--light-color);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .member-photo {
+            height: 250px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: var(--primary-color);
+        }
+        
+        .member-info {
+            padding: 20px;
+        }
+        
+        .member-info h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .member-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        /* Events Section */
+        .events {
+            background-color: var(--light-color);
+        }
+        
+        .events-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .event-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .event-date {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+        }
+        
+        .event-date .day {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .event-content {
+            padding: 20px;
+        }
+        
+        .event-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .top-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-section {
+                margin-bottom: 15px;
+            }
+            
+            .main-nav {
+                flex-direction: column;
+            }
+            
+            .about-content, .contact-content {
+                flex-direction: column;
+            }
+            
+            .hero h2 {
+                font-size: 28px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="top-header">
+                <div class="logo-section">
+                    <div class="logo">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <div class="university-name">
+                        <h1>বাংলাদেশ নার্সেস এসোসিয়েশন (বিএনএ)</h1>
+                        <p>ময়মনসিংহ জেলা শাখা</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary">সদস্য হোন</button>
+                    <button class="btn btn-secondary">লগইন</button>
+                </div>
+            </div>
+            
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#" class="active">হোম</a></li>
+                    <li><a href="#">আমাদের সম্পর্কে</a></li>
+                    <li><a href="#">সেবাসমূহ</a></li>
+                    <li><a href="#">কমিটি</a></li>
+                    <li><a href="#">ইভেন্টস</a></li>
+                    <li><a href="#">গ্যালারি</a></li>
+                    <li><a href="#">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>সেবাই আমাদের প্রধান লক্ষ্য</h2>
+            <p>বাংলাদেশ নার্সেস এসোসিয়েশন, ময়মনসিংহ জেলা শাখা - নার্সিং পেশার উন্নয়ন ও নার্সদের অধিকার রক্ষায় অগ্রণী ভূমিকা পালন করছে</p>
+            <button class="btn btn-primary">আমাদের সাথে যুক্ত হোন</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>আমাদের সম্পর্কে</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="নার্সদের দলবদ্ধ ছবি">
+                </div>
+                <div class="about-text">
+                    <h3>বাংলাদেশ নার্সেস এসোসিয়েশন (বিএনএ)</h3>
+                    <p>বাংলাদেশ নার্সেস এসোসিয়েশন (বিএনএ) দেশের নার্সিং পেশার উন্নয়ন, নার্সদের পেশাগত দক্ষতা বৃদ্ধি এবং তাদের অধিকার রক্ষায় কাজ করে যাচ্ছে। ময়মনসিংহ জেলা শাখা প্রতিষ্ঠার পর থেকেই জেলার নার্সদের সংগঠিত করে তাদের পেশাগত ও ব্যক্তিগত উন্নয়নে গুরুত্বপূর্ণ ভূমিকা পালন করে আসছে।</p>
+                    <p>আমাদের লক্ষ্য হলো একটি দক্ষ, আত্মনির্ভরশীল ও গতিশীল নার্সিং কমিউনিটি গড়ে তোলা যারা দেশের স্বাস্থ্যসেবা ব্যবস্থায় গুরুত্বপূর্ণ অবদান রাখবে।</p>
+                    <button class="btn btn-primary">আরও জানুন</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>আমাদের সেবাসমূহ</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>প্রশিক্ষণ ও কর্মশালা</h3>
+                        <p>নার্সিং পেশার সাথে সংশ্লিষ্ট সকলের জন্য নিয়মিত প্রশিক্ষণ, সেমিনার ও কর্মশালার আয়োজন করা হয়।</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>পেশাগত সহায়তা</h3>
+                        <p>নার্সদের পেশাগত সমস্যা সমাধান ও আইনি সহায়তা প্রদান করা হয়।</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>নেটওয়ার্কিং</h3>
+                        <p>দেশব্যাপী নার্সদের মধ্যে কার্যকর নেটওয়ার্ক গড়ে তোলা ও যোগাযোগ বৃদ্ধি করা।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>কমিটি members</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>ডা: রোকেয়া বেগম</h3>
+                        <p>সভাপতি</p>
+                        <p>ময়মনসিংহ মেডিকেল কলেজ হাসপাতাল</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>সুজন চন্দ্র দাস</h3>
+                        <p>সাধারণ সম্পাদক</p>
+                        <p>কমিউনিটি হেলথ সেন্টার</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>আয়েশা সিদ্দিকা</h3>
+                        <p>সহ-সভাপতি</p>
+                        <p>স্বাস্থ্য ও পরিবার কল্যাণ কেন্দ্র</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>রহিমা খাতুন</h3>
+                        <p>কোষাধ্যক্ষ</p>
+                        <p>সদর হাসপাতাল, ময়মনসিংহ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section events" id="events">
+        <div class="container">
+            <div class="section-title">
+                <h2>আসন্ন ইভেন্টস</h2>
+            </div>
+            <div class="events-list">
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="day">১৫</div>
+                        <div class="month">জুলাই</div>
+                        <div class="year">২০২৩</div>
+                    </div>
+                    <div class="event-content">
+                        <h3>নার্সিং কেয়ার বিষয়ক কর্মশালা</h3>
+                        <p>সময়: সকাল ১০:০০ টা</p>
+                        <p>স্থান: ময়মনসিংহ নার্সেস হোস্টেল</p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="day">২৮</div>
+                        <div class="month">জুলাই</div>
+                        <div class="year">২০২৩</div>
+                    </div>
+                    <div class="event-content">
+                        <h3>বার্ষিক সাধারণ সভা</h3>
+                        <p>সময়: বিকাল ৩:০০ টা</p>
+                        <p>স্থান: বিএনএ অফিস, ময়মনসিংহ</p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="day">৫</div>
+                        <div class="month">আগস্ট</div>
+                        <div class="year">২০২৩</div>
+                    </div>
+                    <div class="event-content">
+                        <h3>স্বাস্থ্য ক্যাম্প</h3>
+                        <p>সময়: সকাল ৯:০০ টা থেকে বিকাল ৪:০০ টা</p>
+                        <p>স্থান: কৃষি বিশ্ববিদ্যালয় ক্যাম্পাস</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>যোগাযোগ করুন</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>ঠিকানা</h3>
+                            <p>বিএনএ অফিস, ময়মনসিংহ মেডিকেল কলেজ হাসপাতাল সংলগ্ন, ময়মনসিংহ</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>ফোন</h3>
+                            <p>+৮৮০ ১৭১২-৩৪৫৬৭৮</p>
+                            <p>+৮৮০ ৯১-৬২৩৪৫</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>ইমেইল</h3>
+                            <p>bna.mymensingh@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>অফিস সময়</h3>
+                            <p>শনিবার - বুধবার: সকাল ৯:০০ - বিকাল ৫:০০</p>
+                            <p>বৃহস্পতিবার: সকাল ৯:০০ - দুপুর ১:০০</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">আপনার নাম</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">ইমেইল ঠিকানা</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">বিষয়</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">বার্তা</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">বার্তা পাঠান</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>বাংলাদেশ নার্সেস এসোসিয়েশন</h3>
+                    <p>ময়মনসিংহ জেলা শাখা</p>
+                    <p>নার্সিং পেশার উন্নয়ন ও নার্সদের অধিকার রক্ষায় আমরা অঙ্গীকারবদ্ধ।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>দ্রুত লিংক</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">হোম</a></li>
+                        <li><a href="#">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#">সেবাসমূহ</a></li>
+                        <li><a href="#">কমিটি</a></li>
+                        <li><a href="#">ইভেন্টস</a></li>
+                        <li><a href="#">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>যোগাযোগ</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> বিএনএ অফিস, ময়মনসিংহ মেডিকেল কলেজ হাসপাতাল সংলগ্ন</li>
+                        <li><i class="fas fa-phone"></i> +৮৮০ ১৭১২-৩৪৫৬৭৮</li>
+                        <li><i class="fas fa-envelope"></i> bna.mymensingh@example.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>কপিরাইট © ২০২৩ বাংলাদেশ নার্সেস এসোসিয়েশন, ময়মনসিংহ জেলা শাখা। সকল স্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('আপনার বার্তা সফলভাবে পাঠানো হয়েছে। আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।');
+            this.reset();
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
